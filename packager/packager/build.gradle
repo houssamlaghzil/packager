@@ -15,4 +15,8 @@ dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
     compile group: 'org.bytedeco', name: 'javacv-platform', version: '1.5.2'
 
+
+    // https://mvnrepository.com/artifact/com.github.lalyos/jfiglet
+    compile group: 'com.github.lalyos', name: 'jfiglet', version: '0.0.3'
+
 }
