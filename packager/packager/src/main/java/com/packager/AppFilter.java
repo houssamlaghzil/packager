@@ -6,11 +6,21 @@ import java.io.File;
 
 public abstract class AppFilter {
 
+<<<<<<< HEAD
     public static void main(String[] args) {
         System.out.println("application has started");
 
         chooseFilter();
 
+=======
+        System.out.println("application has started");
+        print("|------------ MENU ------------|");
+        print("|         0 - blur             |");
+        print("|         1 - BnWfilter        |");
+        print("|         2 - DikateFilter     |");
+        print("|         3 - exite            |");
+        print("|------------------------------|");
+>>>>>>> master
     }
 
 
