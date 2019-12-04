@@ -29,8 +29,12 @@ public abstract class AppFilter {
         System.out.println(o);
     }
 
+<<<<<<< HEAD
 
     public static void chooseFilter() {
+=======
+    public static void choiceFilter() {
+>>>>>>> master
         Scanner sc = new Scanner(System.in);
         String actions;
         ArrayList commandList = new ArrayList();
@@ -60,9 +64,15 @@ public abstract class AppFilter {
             else if (actions.equals("1") || actions.equals(commandList.get(1))){
                 print("applying Black and White effect");
 
+<<<<<<< HEAD
             }
             else if (actions.equals("2") || actions.equals(commandList.get(2))){
                 print("applying Dilate effect");
+=======
+        String chemin =  "/Users/franceebbasta/Desktop/AllPicturs/plage.jpg";
+        BlurFilter blurFilter = new BlurFilter();
+
+>>>>>>> master
 
             }
 
