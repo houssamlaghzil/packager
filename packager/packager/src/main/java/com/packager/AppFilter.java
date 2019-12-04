@@ -4,6 +4,9 @@ import java.util.Scanner;
 
 public abstract class AppFilter {
     public static void main(String[] args) {
+        String chemin =  "/Users/franceebbasta/Desktop/AllPicturs/plage.jpg";
+        BlurFilter blurFilter = new BlurFilter();
+        blurFilter.smooth(chemin);
 
         System.out.println("application has started");
         print("|------------ MENU ------------|");
