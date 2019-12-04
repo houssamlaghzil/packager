@@ -1,12 +1,11 @@
 package com.packager;
-
 import org.bytedeco.opencv.opencv_core.*;
-
 import static org.bytedeco.opencv.global.opencv_imgproc.*;
-
 import org.bytedeco.opencv.opencv_core.Size;
 
-
+/**
+ * Convertir une image en blur
+ */
 public class BlurFilter {
 
     public Mat filterBlur(Mat image) {

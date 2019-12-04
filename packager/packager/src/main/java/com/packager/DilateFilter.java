@@ -6,8 +6,15 @@ import org.opencv.core.Mat;
 import org.opencv.imgproc.Imgproc;
 import static org.opencv.imgproc.Imgproc.dilate;
 
+/**
+ *
+ */
 public class DilateFilter{
-
+    /**
+     * Convertir une image en dilate
+     * @param image
+     * @return
+     */
     public Mat filterDilate(Mat image) {
         int size = 8;
         Mat result = image.clone();

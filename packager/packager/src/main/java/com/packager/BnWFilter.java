@@ -8,7 +8,6 @@ import org.opencv.imgproc.Imgproc;
 
 /**
  * Convertir une image en nuance de gris
- * @author Axel - ® fobec.com 2010
  */
 public class BnWFilter {
 
