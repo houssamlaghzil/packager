@@ -27,5 +27,6 @@ public class BlurFilter implements IFilter{
 
         }
 
+
     }
 }
