@@ -10,7 +10,11 @@ import java.io.File;
 public class AppFilter {
 >>>>>>> Stashed changes
     public static void main(String[] args) {
-<<<<<<< HEAD
+
+        String chemin =  "/Users/franceebbasta/Desktop/AllPicturs/plage.jpg";
+        BlurFilter blurFilter = new BlurFilter();
+        blurFilter.smooth(chemin);
+
 
         System.out.println("application has started");
         print("|------------ MENU ------------|");
@@ -57,11 +61,9 @@ public class AppFilter {
         file2.loadAndShowOrExit("/Users/Gwenael/Desktop/packager/PictureBefore/geraltderiv.jpg");
 >>>>>>> Stashed changes
 
-=======
         String chemin =  "/Users/franceebbasta/Desktop/AllPicturs/plage.jpg";
         BlurFilter blurFilter = new BlurFilter();
         blurFilter.smooth(chemin);
->>>>>>> master
 
             }
         }
