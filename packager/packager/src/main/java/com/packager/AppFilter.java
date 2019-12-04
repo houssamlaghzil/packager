@@ -20,7 +20,6 @@ public abstract class AppFilter {
     }
 
 
-
     public static void chooseFilter() {
         Scanner sc = new Scanner(System.in);
         String actions;
