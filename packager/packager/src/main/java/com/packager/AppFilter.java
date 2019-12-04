@@ -19,8 +19,6 @@ public abstract class AppFilter {
         System.out.println(o);
     }
 
-
-
     public static void choiceFilter() {
         Scanner sc = new Scanner(System.in);
         String filter = sc.nextLine();
@@ -39,7 +37,7 @@ public abstract class AppFilter {
 
         String chemin =  "/Users/franceebbasta/Desktop/AllPicturs/plage.jpg";
         BlurFilter blurFilter = new BlurFilter();
-        blurFilter.smooth(chemin);
+
 
             }
         }

@@ -5,6 +5,7 @@ import static org.bytedeco.opencv.global.opencv_imgcodecs.imread;
 import static org.bytedeco.opencv.global.opencv_imgcodecs.imwrite;
 import static org.bytedeco.opencv.global.opencv_imgproc.*;
 import org.bytedeco.opencv.opencv_core.Size;
+import static org.bytedeco.opencv.global.opencv_imgcodecs.*;
 
 
 public class BlurFilter implements IFilter{
