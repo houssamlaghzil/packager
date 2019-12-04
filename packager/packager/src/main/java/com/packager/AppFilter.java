@@ -19,28 +19,4 @@ public abstract class AppFilter {
         System.out.println(o);
     }
 
-    public static void choiceFilter() {
-        Scanner sc = new Scanner(System.in);
-        String filter = sc.nextLine();
-
-        while (!filter.equals("3")) {
-            if (filter.equals("0")) {
-                print("blur effct");
-
-
-            } else if (filter.equals("1")) {
-                print("BnWFilter");
-                new BnWFilter();
-
-            } else if (filter.equals("2")) {
-                print("DilateFilter");
-
-        String chemin =  "/Users/franceebbasta/Desktop/AllPicturs/plage.jpg";
-        BlurFilter blurFilter = new BlurFilter();
-
-
-            }
-        }
-        print("okey bye");
-    }
 }
