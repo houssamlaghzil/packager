@@ -13,12 +13,19 @@ public class BlurFilter implements IFilter{
 
 
     @Override
-    public void filter(String fileIn, String fileOut) {
+    public void filter(String fileIn, String fileOut) throws FilterException {
         Mat img = imread(fileIn);
         int size = 3;
-        Mat result = img.clone();
-        GaussianBlur(img, result, new Size(size, size), 0);
-        imwrite(fileOut, img);
+        if(size%2==1) {
+            Mat result = img.clone();
+            GaussianBlur(img, result, new Size(size, size), 0);
+            imwrite(fileOut, img);
+        }
+        else{
+            throw new FilterException("you don't have enter a good size value");
+
+
+        }
 
     }
 }
