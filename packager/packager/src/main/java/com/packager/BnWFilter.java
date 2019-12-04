@@ -1,12 +1,12 @@
 package com.packager;
 
-import java.awt.Graphics;
+import javax.imageio.ImageIO;
+import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.imageio.ImageIO;
 
 import static javax.imageio.ImageIO.read;
 
@@ -23,10 +23,10 @@ public class BnWFilter {
             /**
              * Image d'entrée en couleur
              */
-            String inFilename = "file:///Users/souksou/Desktop/packager/packager/packager/src/main/java/com/packager/imgin/8326519c9fbbbb4.png";
-            File inputFile = new File(inFilename);
+            String inFilename = "file:///Users/souksou/Desktop/packager/packager/packager/src/main/java/com/packager/imgin/imgteste.png";
+            File inputFile = new File("file:///Users/souksou/Desktop/packager/packager/packager/src/main/java/com/packager/imgin");
             BufferedImage imagesrc;
-            imagesrc = read(inputFile);
+            imagesrc = read(new File("file:///Users/souksou/Desktop/packager/packager/packager/src/main/java/com/packager/imgin"));
             //Convertion en grisé
             BufferedImage imagedst = new BufferedImage(imagesrc.getWidth(),
 
@@ -39,8 +39,8 @@ public class BnWFilter {
              * Image de sortie en nuance de gris
              */
             String outFilename = "file:///Users/souksou/Desktop/packager/packager/packager/src/main/java/com/packager/imgout/";
-            File outFile = new File(outFilename);
-            ImageIO.write(imagedst, "PNG", outFile);
+            File outFile = new File("file:///Users/souksou/Desktop/packager/packager/packager/src/main/java/com/packager/imgout");
+            ImageIO.write(imagedst, "png", new File("file:///Users/souksou/Desktop/packager/packager/packager/src/main/java/com/packager/imgin"));
             System.out.println("Fin de conversion....");
         } catch (IOException ex) {
             Logger.getLogger(BnWFilter.class.getName()).log(Level.SEVERE, null, ex);

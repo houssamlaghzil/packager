@@ -1,21 +1,16 @@
 package com.packager;
 
-import org.bytedeco.opencv.opencv_core.*;
-
-import static org.bytedeco.opencv.global.opencv_imgproc.*;
-import static org.bytedeco.opencv.global.opencv_imgcodecs.*;
-import org.bytedeco.opencv.opencv_core.*;
-
+import org.bytedeco.opencv.opencv_core.Mat;
 import org.bytedeco.opencv.opencv_core.Size;
 
 
 public class BlurFilter<image> {
 
     public void smooth(String filename) {
-        Mat image = imread(filename);
+        Mat image = imread("file:///Users/souksou/Desktop/packager/packager/packager/src/main/java/com/packager/imgin/imgteste.png");
         if (image != null) {
             GaussianBlur(image, image, new Size(3, 3), 0);
-            imwrite(filename, image);
+            imwrite("file:///Users/souksou/Desktop/packager/packager/packager/src/main/java/com/packager/imgin", imgteste.png);
         }
     }
 
