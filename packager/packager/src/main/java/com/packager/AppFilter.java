@@ -1,22 +1,17 @@
 package com.packager;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public abstract class AppFilter {
     public static void main(String[] args) {
 
-        System.out.println("application has started");
-        print("|------------ MENU ------------|");
-        print("|         0 - blur             |");
-        print("|         1 - BnWfilter        |");
-        print("|         2 - DikateFilter     |");
-        print("|         3 - exite            |");
-        print("|------------------------------|");
-    }
+        List<IFilter> filterArray = new ArrayList<>();
+        filterArray.add(new BlurFilter());
+        filterArray.add(new BnWFilter());
+        filterArray.add(new DilateFilter());
 
-    public static void print(Object o)     /** print shortcut method */
-    {
-        System.out.println(o);
     }
-
 }
+
