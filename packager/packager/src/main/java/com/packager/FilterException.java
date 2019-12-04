@@ -10,5 +10,4 @@ public class FilterException extends Exception {
             super(message, cause);
         }
 
-
 }

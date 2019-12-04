@@ -1,6 +1,12 @@
 package com.packager;
 
+<<<<<<< HEAD
 import java.util.ArrayList;
+=======
+<<<<<<< HEAD
+import java.util.ArrayList;
+import java.util.List;
+>>>>>>> master
 import java.util.Scanner;
 import java.io.File;
 
@@ -10,6 +16,7 @@ public abstract class AppFilter {
     public static void main(String[] args) {
         System.out.println("application has started");
 
+<<<<<<< HEAD
         chooseFilter();
 
 =======
@@ -73,11 +80,48 @@ public abstract class AppFilter {
         BlurFilter blurFilter = new BlurFilter();
 
 >>>>>>> master
+=======
+        List<IFilter> filterArray = new ArrayList<>();
+        filterArray.add(new BlurFilter());
+        filterArray.add(new BnWFilter());
+        filterArray.add(new DilateFilter());
+=======
+import java.io.File;
+>>>>>>> master
 
+public abstract class AppFilter {
+    public static void main(String[] args) throws FilterException {
+
+
+        String dir = "/Users/franceebbasta/Desktop/packager/packager/packager/src/main/java/imageIn";
+        String dirOut = "/Users/franceebbasta/Desktop/packager/packager/packager/src/main/java/imageOut";
+
+        File rep = new File(dir);
+        String liste[] = rep.list();
+        if (liste != null){
+            for(int i =0; i<liste.length;i++){
+                System.out.println(dir + liste[i]);
+                IFilter blurFilter = new BlurFilter();
+                IFilter dilateFilter = new DilateFilter();
+                IFilter bnWFilter = new BnWFilter();
+                String cheminIn = dir + "/" +liste[i];
+                String cheminOut = dirOut + "/" + liste[i];
+                blurFilter.filter(cheminIn,cheminOut);
+                dilateFilter.filter(cheminOut ,cheminOut);
+                bnWFilter.filter(cheminOut,cheminOut);
             }
 
+<<<<<<< HEAD
         } while (!actions.equals("3"));
 
+=======
+        }
+        else{
+            System.err.println("nom invalide");
+        }
+>>>>>>> filterStory5
+>>>>>>> master
 
     }
 }
+
