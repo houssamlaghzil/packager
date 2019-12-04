@@ -23,11 +23,8 @@ public class BlurFilter implements IFilter{
 
 
         }
-<<<<<<< HEAD
 
 
     }
-=======
 }
->>>>>>> filterStory5
-}
+
