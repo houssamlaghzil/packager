@@ -1,18 +1,39 @@
 package com.packager;
 
 
+import org.bytedeco.opencv.opencv_core.Mat;
+
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
+
+import static org.bytedeco.opencv.global.opencv_imgcodecs.imread;
+import static org.bytedeco.opencv.global.opencv_imgcodecs.imwrite;
 
 
 public abstract class AppFilter {
     public static void main(String[] args) {
 
-        List<IFilter> filterArray = new ArrayList<>();
-        filterArray.add(new BlurFilter());
-        filterArray.add(new BnWFilter());
-        filterArray.add(new DilateFilter());
+
+        List<IFilter> filterArray = new ArrayList<>(); // liste des filtres a applliqué
+
+
+        String filterArg = "ce qui est en ligne de commande";
+        String[] split = filterArg.split("\\|");
+
+        for (String s : split){
+            switch (s){
+                case "blur":
+                    filterArray.add(new BlurFilter());
+                    break;
+                case  "grayscale":
+                    filterArray.add(new BnWFilter());
+                    break;
+                case  "dilate":
+                    filterArray.add(new DilateFilter());
+                    break;
+            }
+        }
 
 
 
@@ -30,9 +51,12 @@ public abstract class AppFilter {
                 String cheminOut = dirOut + "/" + liste[i];
 
                 try {
-                    blurFilter.filter(cheminIn, cheminOut);
-                    dilateFilter.filter(cheminOut ,cheminOut);
-                    bnWFilter.filter(cheminOut,cheminOut);
+                    Mat img = imread(cheminIn);
+                    for (IFilter f : filterArray) {
+                        img = f.filter(img);
+                    }
+                    imwrite(cheminOut, img);
+
                 }catch (Exception e)
                 {
                     System.out.println(e);
