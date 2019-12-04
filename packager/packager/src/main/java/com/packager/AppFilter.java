@@ -1,31 +1,19 @@
 package com.packager;
 
-<<<<<<< Updated upstream
+import java.util.ArrayList;
 import java.util.Scanner;
-
-public abstract class AppFilter {
-=======
 import java.io.File;
 
-public class AppFilter {
->>>>>>> Stashed changes
+public abstract class AppFilter {
+
     public static void main(String[] args) {
-
-        String chemin =  "/Users/franceebbasta/Desktop/AllPicturs/plage.jpg";
-        BlurFilter blurFilter = new BlurFilter();
-        blurFilter.smooth(chemin);
-
-
         System.out.println("application has started");
-        print("|------------ MENU ------------|");
-        print("|         0 - blur             |");
-        print("|         1 - BnWfilter        |");
-        print("|         2 - DikateFilter     |");
-        print("|         3 - exite            |");
-        print("|------------------------------|");
+
+        chooseFilter();
+
     }
 
-<<<<<<< Updated upstream
+
     public static void print(Object o)     /** print shortcut method */
     {
         System.out.println(o);
@@ -33,40 +21,44 @@ public class AppFilter {
 
 
 
-    public static void choiceFilter() {
+    public static void chooseFilter() {
         Scanner sc = new Scanner(System.in);
-        String filter = sc.nextLine();
+        String actions;
+        ArrayList commandList = new ArrayList();
 
-        while (!filter.equals("3")) {
-            if (filter.equals("0")) {
-                print("blur effct");
-=======
+        commandList.add("blur_effect");
+        commandList.add("bnw_effect");
+        commandList.add("dilate_effect");
+        commandList.add("exit");
+
         System.out.println("application has started");
->>>>>>> Stashed changes
+        print("|------------ MENU ------------|");
+        print("|         0 - blur_effect      |");
+        print("|         1 - BnW_effect       |");
+        print("|         2 - dilate_effect    |");
+        print("|         3 - exit             |");
+        print("|------------------------------|");
 
-        BlurFilter file = new BlurFilter();
-        //file.Smoother("geraltderiv.jpg");
-        File dir = new File("gwen/Macintosh HD/Utilisateurs/Gwenael/Bureau/packager/PictureBefore");
+        do{
+            actions = sc.nextLine();
 
-<<<<<<< Updated upstream
-            } else if (filter.equals("1")) {
-                print("BnWFilter");
-                new BnWFilter();
-
-            } else if (filter.equals("2")) {
-                print("DilateFilter");
-=======
-        System.out.println(dir.isDirectory());
-        BlurFilter file2 = new BlurFilter();
-        file2.loadAndShowOrExit("/Users/Gwenael/Desktop/packager/PictureBefore/geraltderiv.jpg");
->>>>>>> Stashed changes
-
-        String chemin =  "/Users/franceebbasta/Desktop/AllPicturs/plage.jpg";
-        BlurFilter blurFilter = new BlurFilter();
-        blurFilter.smooth(chemin);
+            if (actions.equals("0") || actions.equals(commandList.get(0))) {
+                print("applying blur effect");
+                BlurFilter file = new BlurFilter();
+                String filePath = "/Users/Gwenael/Desktop/packager/PictureBefore/geraltderiv.jpg";
+                file.smooth(filePath);
+            }
+            else if (actions.equals("1") || actions.equals(commandList.get(1))){
+                print("applying Black and White effect");
 
             }
-        }
-        print("okey bye");
+            else if (actions.equals("2") || actions.equals(commandList.get(2))){
+                print("applying Dilate effect");
+
+            }
+
+        } while (!actions.equals("3"));
+
+
     }
 }
