@@ -42,5 +42,20 @@ public class BlurFilter<image> {
          * flou
          * @param filename
          */
+<<<<<<< Updated upstream
+=======
+            Mat image = imread("/Users/tchydemianmarie/Desktop/packager/packager/packager/src/main/java/com/packager/imgin");//Open file OpenCV format
+            if (image != null) {
+                GaussianBlur(image, image, new Size(3, 3), 0);//flou img
+                imwrite("/Users/tchydemianmarie/Desktop/packager/packager/packager/src/main/java/imgout", image);//save img flou
+            }
+
+
+        }
+
+
+
+
+>>>>>>> Stashed changes
     }
 }
