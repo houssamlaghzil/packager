@@ -2,14 +2,9 @@ package com.packager;
 
 public class AppFilter {
     public static void main(String[] args) {
-
-
-
-        System.out.println("application has started");
-
-
-
-
+        String chemin =  "/Users/franceebbasta/Desktop/AllPicturs/plage.jpg";
+        BlurFilter blurFilter = new BlurFilter();
+        blurFilter.smooth(chemin);
 
     }
 }
