@@ -16,7 +16,7 @@ import static javax.imageio.ImageIO.read;
  */
 public class BnWFilter {
 
-    public static void main(String args[]) {
+    public static void bnWfilter(String args[]) {
         try {
             System.out.println("Début de conversion....");
             //Ouverture du fichier
