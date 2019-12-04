@@ -1,4 +1,5 @@
 package com.packager;
 
-public class FilterLogger {
+public interface FilterLogger {
+    void log(String message);
 }

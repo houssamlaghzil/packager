@@ -16,6 +16,7 @@ import static javax.imageio.ImageIO.read;
  */
 public class BnWFilter {
 
+<<<<<<< Updated upstream
     public static void bnWfilter(String args[]) {
         try {
             System.out.println("Début de conversion....");
@@ -47,3 +48,7 @@ public class BnWFilter {
         }
     }
 }
+=======
+
+}
+>>>>>>> Stashed changes
