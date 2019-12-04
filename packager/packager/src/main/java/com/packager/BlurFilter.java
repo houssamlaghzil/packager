@@ -3,6 +3,7 @@ package com.packager;
 <<<<<<< HEAD
 <<<<<<< HEAD
 import org.bytedeco.opencv.opencv_core.Mat;
+<<<<<<< HEAD
 import org.bytedeco.opencv.opencv_core.Size;
 
 import static org.bytedeco.opencv.global.opencv_imgproc.*;
@@ -35,14 +36,16 @@ import org.bytedeco.opencv.opencv_core.Mat;
 >>>>>>> master
 import static org.bytedeco.opencv.global.opencv_imgcodecs.imread;
 import static org.bytedeco.opencv.global.opencv_imgcodecs.imwrite;
+=======
+>>>>>>> master
 import static org.bytedeco.opencv.global.opencv_imgproc.*;
 >>>>>>> master
 import org.bytedeco.opencv.opencv_core.Size;
 
 
 public class BlurFilter implements IFilter{
-
     @Override
+<<<<<<< HEAD
 
     public void filter(String fileIn, String fileOut) throws FilterException {
         Mat img = imread(fileIn);
@@ -56,23 +59,24 @@ public class BlurFilter implements IFilter{
 >>>>>>> master
 =======
 =======
+=======
+    public Mat filter(Mat img) throws FilterException {
+>>>>>>> master
         int size = 33;
 >>>>>>> master
         if(size%2==1) {
             GaussianBlur(img, img, new Size(size, size), 0);
-            imwrite(fileOut, img);
         }
         else{
             throw new FilterException("you don't have enter a good size value");
+<<<<<<< HEAD
 
 >>>>>>> master
 
-        }
-<<<<<<< HEAD
-
-
-    }
 =======
+>>>>>>> master
+        }
+        return img;
+    }
 }
->>>>>>> filterStory5
-}
+

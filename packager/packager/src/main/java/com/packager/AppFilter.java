@@ -1,14 +1,24 @@
 package com.packager;
 
-<<<<<<< HEAD
+
+import org.bytedeco.opencv.opencv_core.Mat;
+
+import java.io.File;
 import java.util.ArrayList;
 =======
 <<<<<<< HEAD
 import java.util.ArrayList;
 import java.util.List;
+<<<<<<< HEAD
 >>>>>>> master
 import java.util.Scanner;
 import java.io.File;
+=======
+
+import static org.bytedeco.opencv.global.opencv_imgcodecs.imread;
+import static org.bytedeco.opencv.global.opencv_imgcodecs.imwrite;
+
+>>>>>>> master
 
 public abstract class AppFilter {
 
@@ -38,6 +48,7 @@ public abstract class AppFilter {
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
     public static void chooseFilter() {
 =======
     public static void choiceFilter() {
@@ -88,9 +99,29 @@ public abstract class AppFilter {
 =======
 import java.io.File;
 >>>>>>> master
+=======
+>>>>>>> master
 
-public abstract class AppFilter {
-    public static void main(String[] args) throws FilterException {
+        List<IFilter> filterArray = new ArrayList<>(); // liste des filtres a applliqué
+
+
+        String filterArg = "ce qui est en ligne de commande";
+        String[] split = filterArg.split("\\|");
+
+        for (String s : split){
+            switch (s){
+                case "blur":
+                    filterArray.add(new BlurFilter());
+                    break;
+                case  "grayscale":
+                    filterArray.add(new BnWFilter());
+                    break;
+                case  "dilate":
+                    filterArray.add(new DilateFilter());
+                    break;
+            }
+        }
+
 
 
         String dir = "/Users/franceebbasta/Desktop/packager/packager/packager/src/main/java/imageIn";
@@ -100,15 +131,24 @@ public abstract class AppFilter {
         String liste[] = rep.list();
         if (liste != null){
             for(int i =0; i<liste.length;i++){
-                System.out.println(dir + liste[i]);
                 IFilter blurFilter = new BlurFilter();
                 IFilter dilateFilter = new DilateFilter();
                 IFilter bnWFilter = new BnWFilter();
                 String cheminIn = dir + "/" +liste[i];
                 String cheminOut = dirOut + "/" + liste[i];
-                blurFilter.filter(cheminIn,cheminOut);
-                dilateFilter.filter(cheminOut ,cheminOut);
-                bnWFilter.filter(cheminOut,cheminOut);
+
+                try {
+                    Mat img = imread(cheminIn);
+                    for (IFilter f : filterArray) {
+                        img = f.filter(img);
+                    }
+                    imwrite(cheminOut, img);
+
+                }catch (Exception e)
+                {
+                    System.out.println(e);
+                }
+
             }
 
 <<<<<<< HEAD
@@ -119,7 +159,11 @@ public abstract class AppFilter {
         else{
             System.err.println("nom invalide");
         }
+<<<<<<< HEAD
 >>>>>>> filterStory5
+>>>>>>> master
+=======
+
 >>>>>>> master
 
     }
