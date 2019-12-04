@@ -1,26 +1,16 @@
 package com.packager;
 
-import org.bytedeco.opencv.opencv_core.*;
-
-import static org.bytedeco.opencv.global.opencv_imgproc.*;
-import static org.bytedeco.opencv.global.opencv_imgcodecs.*;
-import org.bytedeco.opencv.opencv_core.*;
-
+import org.bytedeco.opencv.opencv_core.Mat;
 import org.bytedeco.opencv.opencv_core.Size;
 
 
 public class BlurFilter<image> {
 
-    /**
-     * flou
-     * @param filename
-     */
-    public static void smooth(String filename) {
-
-        Mat image = imread(filename);//Open file OpenCV format
+    public void smooth(String filename) {
+        Mat image = imread(filename);
         if (image != null) {
-            GaussianBlur(image, image, new Size(29, 29), 0);//flou img
-            imwrite(filename, image);//save img flou
+            GaussianBlur(image, image, new Size(3, 3), 0);
+            imwrite(filename, image);
         }
         else
         {
