@@ -11,17 +11,18 @@ import static org.bytedeco.opencv.global.opencv_imgcodecs.*;
 public class DilateFilter implements IFilter {
 
     @Override
+
     public void filter(String fileIn, String fileOut) throws FilterException {
         Mat img = imread(fileIn);
-        int size = 8;
+        int size = 10;
         if (img != null) {
-            Mat result = img.clone();
             Mat element = getStructuringElement(Imgproc.MORPH_RECT, new Size(2 * size + 1, 2 * size + 1));
-            dilate(img, result, element);
+            dilate(img, img, element);
             imwrite(fileOut, img);
         } else {
             throw new FilterException("you haven't the good format ");
         }
+
     }
 }
 
