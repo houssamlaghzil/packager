@@ -23,7 +23,7 @@ public class BnWFilter {
             /**
              * Image d'entrée en couleur
              */
-            String inFilename = "file:///Users/souksou/Documents/img/8326519c9fbbbb4.png";
+            String inFilename = "file:///Users/souksou/Desktop/packager/packager/packager/src/main/java/com/packager/imgin/8326519c9fbbbb4.png";
             File inputFile = new File(inFilename);
             BufferedImage imagesrc;
             imagesrc = read(inputFile);
@@ -38,7 +38,7 @@ public class BnWFilter {
             /**
              * Image de sortie en nuance de gris
              */
-            String outFilename = "file:///Users/souksou/Documents/img/8326519c9fbbbb4.png";
+            String outFilename = "file:///Users/souksou/Desktop/packager/packager/packager/src/main/java/com/packager/imgout/";
             File outFile = new File(outFilename);
             ImageIO.write(imagedst, "PNG", outFile);
             System.out.println("Fin de conversion....");
