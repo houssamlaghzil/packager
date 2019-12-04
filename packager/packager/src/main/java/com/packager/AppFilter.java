@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public abstract class AppFilter {
     public static void main(String[] args) {
+<<<<<<< HEAD
 
         System.out.println("application has started");
         print("|------------ MENU ------------|");
@@ -37,6 +38,11 @@ public abstract class AppFilter {
             } else if (filter.equals("2")) {
                 print("DilateFilter");
 
+=======
+        String chemin =  "/Users/franceebbasta/Desktop/AllPicturs/plage.jpg";
+        BlurFilter blurFilter = new BlurFilter();
+        blurFilter.smooth(chemin);
+>>>>>>> master
 
             }
         }
