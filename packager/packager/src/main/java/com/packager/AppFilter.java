@@ -5,9 +5,12 @@ import java.util.Scanner;
 public abstract class AppFilter {
     public static void main(String[] args) {
 
+<<<<<<< HEAD
         String chemin =  "/Users/franceebbasta/Desktop/AllPicturs/plage.jpg";
         BlurFilter blurFilter = new BlurFilter();
         blurFilter.smooth(chemin);
+=======
+>>>>>>> master
 
         System.out.println("application has started");
         print("|------------ MENU ------------|");
