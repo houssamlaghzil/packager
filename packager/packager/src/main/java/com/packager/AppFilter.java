@@ -4,8 +4,6 @@ import org.apache.commons.cli.*;
 import org.bytedeco.opencv.opencv_core.Mat;
 
 import java.io.File;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.util.*;
 
 import static org.bytedeco.opencv.global.opencv_imgcodecs.imread;
@@ -23,6 +21,15 @@ public abstract class AppFilter {
     public static void main(String[] args) {
         System.out.println("application has started");
 
+        OpenIni open = new OpenIni();
+        try {
+            open.openIni();
+
+        }catch (Exception e)
+        {
+            System.out.println(e);
+        }
+
         List<String> listCommandArgs = createCLI(args);
         Map<IFilter, Integer> filtersOptions = whichFilters( listCommandArgs );
         usingFilters(filtersOptions , listCommandArgs);
@@ -37,8 +44,8 @@ public abstract class AppFilter {
      */
     public static List<String> createCLI(String[] args){      // surement pas encore fini, mais il y a déja de l'avancement
         String filterArg = "";
-        String dirIn = "/Users/Gwenael/Desktop/packager/packager/packager/src/main/java/imageIn";
-        String dirOut = "/Users/Gwenael/Desktop/packager/packager/packager/src/main/java/imageOut";
+        String dirIn = "packager/packager/src/main/java/imageIn";
+        String dirOut = "packager/packager/src/main/java/imageOut";
 
         HelpFormatter formatter = new HelpFormatter();
         List<String> listCommandArgs = new ArrayList<>();
@@ -94,8 +101,7 @@ public abstract class AppFilter {
         // et DilateFilter (on a du modifier IFilter en ajoutant l'argument int en plus de Mat
         int size = 0;
         FilterLogger logger = new FilterLoggerFile();
-        DateFormat format = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
-        Date date = new Date();
+
 
         String[] splitFilters = listCommandArgs.get(2).split("\\|");  //liste contenant des string formé a partir de la separation d'un String (celui aprés -f en CLI)
         // selon le caractère '\'
@@ -107,16 +113,16 @@ public abstract class AppFilter {
                 case "blur":
                     size = Integer.parseInt(splitValue[1]);         //on passe d'un String a un Integer
                     filtersOptions.put(new BlurFilter(),size);
-                    logger.log(format.format(date) + " you want to apply " + splitValue[0] +". value: " + splitValue[1]);
+                    logger.log( " you want to apply " + splitValue[0] +". value: " + splitValue[1]);
                     break;
                 case  "grayscale":
                     filtersOptions.put(new BnWFilter(),size);
-                    logger.log(format.format(date) + " you want to apply " + splitValue[0]);
+                    logger.log(" you want to apply " + splitValue[0]);
                     break;
                 case  "dilate":
                     size = Integer.parseInt(splitValue[1]);
                     filtersOptions.put(new DilateFilter(),size);
-                    logger.log( format.format(date) + " you want to apply " + splitValue[0] +". value: " + splitValue[1]);
+                    logger.log( " you want to apply " + splitValue[0] +". value: " + splitValue[1]);
                     break;
             }
         }
@@ -145,8 +151,7 @@ public abstract class AppFilter {
         String liste[] = rep.list();
 
         FilterLogger logger = new FilterLoggerFile();
-        DateFormat format = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
-        Date date = new Date();
+
 
         if (liste != null){
 
@@ -158,7 +163,7 @@ public abstract class AppFilter {
                     Mat img = imread(pathIn);
                     for (Map.Entry<IFilter, Integer> entry : filtersOptions.entrySet()) {
                         img = entry.getKey().filter(img, entry.getValue());
-                        String beginMessage = format.format(date)  + " => " + entry.getKey().logDescription(entry.getValue()) + " on " + liste[i];
+                        String beginMessage = " => " + entry.getKey().logDescription(entry.getValue()) + " on " + liste[i];
                         logger.log(beginMessage + " from Directory " + dirInRac + " \t(" + dirIn + "). \t\t\tsave in directory " + dirOutRac + " \t(" +  dirOut + ").");
                     }
                     imwrite(pathOut, img);
