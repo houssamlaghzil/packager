@@ -27,7 +27,6 @@ public abstract class AppFilter {
         Map<IFilter, Integer> filtersOptions = whichFilters( listCommandArgs );
         usingFilters(filtersOptions , listCommandArgs);
 
-
     }
 
 
