@@ -8,7 +8,7 @@ public class FilterLoggerFile implements FilterLogger{
     public void log(String message) {
         try {
             FileWriter writer = new FileWriter("AppFilter.log", true);
-            writer.write(message + "\n");
+            writer.write("\n" + message);
             writer.close();
         } catch (IOException e) {
             e.printStackTrace();

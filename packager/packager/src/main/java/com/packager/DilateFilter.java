@@ -22,4 +22,9 @@ public class DilateFilter implements IFilter {
         return img;
 
     }
+
+    @Override
+    public String logDescription(int value) {
+        return "applying dilate filter, \tvalue: " + value;
+    }
 }

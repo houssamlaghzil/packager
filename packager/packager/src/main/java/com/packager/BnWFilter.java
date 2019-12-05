@@ -24,4 +24,9 @@ public class BnWFilter implements IFilter {
         return result;
 
     }
+
+    @Override
+    public String logDescription(int value) {
+        return "applying black n'white filter";
+    }
 }

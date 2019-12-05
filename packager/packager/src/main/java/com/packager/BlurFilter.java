@@ -27,5 +27,10 @@ public class BlurFilter implements IFilter{
         }
         return img;
     }
+
+    @Override
+    public String logDescription(int value) {
+        return "applying Blur filter, \tvalue: " + value;
+    }
 }
 

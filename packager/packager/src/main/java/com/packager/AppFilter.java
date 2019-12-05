@@ -139,6 +139,10 @@ public abstract class AppFilter {
         File rep = new File(dir);
         String liste[] = rep.list();
 
+        FilterLogger logger = new FilterLoggerFile();
+        DateFormat format = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+        Date date = new Date();
+
         if (liste != null){
 
             for(int i =0; i<liste.length;i++) {
@@ -149,6 +153,7 @@ public abstract class AppFilter {
                     Mat img = imread(pathIn);
                     for (Map.Entry<IFilter, Integer> entry : filtersOptions.entrySet()) {
                         img = entry.getKey().filter(img, entry.getValue());
+                        logger.log(format.format(date)  + " => " + entry.getKey().logDescription(entry.getValue()) + " on " + liste[i]);
                     }
                     imwrite(pathOut, img);
 

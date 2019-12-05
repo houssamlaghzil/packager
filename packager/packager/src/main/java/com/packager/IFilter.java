@@ -16,5 +16,7 @@ public interface IFilter {
      */
     public  Mat filter(Mat image, int size) throws FilterException;
 
+    public String logDescription(int value);
+
 
 }
