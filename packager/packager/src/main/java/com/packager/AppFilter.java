@@ -1,170 +1,151 @@
 package com.packager;
 
-
+import org.apache.commons.cli.*;
 import org.bytedeco.opencv.opencv_core.Mat;
+import org.bytedeco.opencv.presets.opencv_core;
 
 import java.io.File;
+import java.io.FilenameFilter;
 import java.util.ArrayList;
-=======
-<<<<<<< HEAD
-import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
-<<<<<<< HEAD
->>>>>>> master
-import java.util.Scanner;
-import java.io.File;
-=======
+import java.util.Map;
 
 import static org.bytedeco.opencv.global.opencv_imgcodecs.imread;
 import static org.bytedeco.opencv.global.opencv_imgcodecs.imwrite;
 
->>>>>>> master
 
 public abstract class AppFilter {
 
-<<<<<<< HEAD
     public static void main(String[] args) {
         System.out.println("application has started");
 
-<<<<<<< HEAD
-        chooseFilter();
+        usingFilters( whichFilters( createCLI(args) ));
 
-=======
-        System.out.println("application has started");
-        print("|------------ MENU ------------|");
-        print("|         0 - blur             |");
-        print("|         1 - BnWfilter        |");
-        print("|         2 - DikateFilter     |");
-        print("|         3 - exite            |");
-        print("|------------------------------|");
->>>>>>> master
+
     }
 
 
-    public static void print(Object o)     /** print shortcut method */
-    {
-        System.out.println(o);
+    public static String createCLI(String[] args){      // surement pas encore fini, mais il y a déja de l'avancement
+        String filterArg = "";
+
+        Options options = new Options();
+        options.addOption("h", "help", false, "")
+                .addOption("i", "input", false, "-dir <directory>")
+                .addOption("o", "output", false, "-dir <directory>")
+                .addOption("f", "filters", true, "filters options")
+        ;
+
+        HelpFormatter formatter = new HelpFormatter();
+        formatter.printHelp("imageFilter", options);
+
+        CommandLineParser parser = new DefaultParser();
+        try {
+            CommandLine cmd = parser.parse(options, args);
+            if(cmd.hasOption("h")){
+                System.out.println("help option was used");
+            }
+            if(cmd.hasOption("i")){
+                System.out.println("input option was used");
+            }
+            if(cmd.hasOption("o")){
+                System.out.println("output option was used");
+            }
+            if(cmd.hasOption("f")){
+                System.out.println("filters selected was used: " + cmd.getOptionValue("f"));
+                filterArg = cmd.getOptionValue(("f"));
+            }
+        }catch (Exception e ){
+            System.out.println(e);
+        }
+
+
+        //region try 1 CLI
+        /*
+        Options options = new Options();
+        options.addOption("h","help",  false, "display command list");
+        //options.addOption(Option.builder().withLongOpt("block-size"));
+        Option logfile= Option.builder().longOpt("input").argName("i").hasArg().desc("input file name").build();
+        options.addOption(logfile);
+
+        //options.addOption("i","input",  false, "display command list");
+        options.addOption("o","output",  false, "display command list");
+
+        CommandLineParser parser = new DefaultParser();
+        try{
+            CommandLine cmd = parser.parse( options, args);
+            if (cmd.hasOption("help")) {
+                System.out.println(cmd.getOptionValue("help"));
+            }
+        }catch (Exception e) {
+            System.out.println(e);
+        }
+
+
+        */
+//endregion
+
+
+        return filterArg;
     }
 
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-    public static void chooseFilter() {
-=======
-    public static void choiceFilter() {
->>>>>>> master
-        Scanner sc = new Scanner(System.in);
-        String actions;
-        ArrayList commandList = new ArrayList();
+    public static Map<IFilter, Integer> whichFilters(String filterArg){
+        Map<IFilter, Integer> filtersOptions = new HashMap<>(); // List contenant l'objet IFilter, et un entier: size utilisé pour BlurFilter
+        // et DilateFilter (on a du modifier IFilter en ajoutant l'argument int en plus de Mat
+        int size = 0;
 
-        commandList.add("blur_effect");
-        commandList.add("bnw_effect");
-        commandList.add("dilate_effect");
-        commandList.add("exit");
+        String[] splitFilters = filterArg.split("\\|");  //liste contenant des string formé a partir de la separation d'un String (celui aprés -f en CLI)
+        // selon le caractère '\'
 
-        System.out.println("application has started");
-        print("|------------ MENU ------------|");
-        print("|         0 - blur_effect      |");
-        print("|         1 - BnW_effect       |");
-        print("|         2 - dilate_effect    |");
-        print("|         3 - exit             |");
-        print("|------------------------------|");
+        for (String s : splitFilters){
 
-        do{
-            actions = sc.nextLine();
-
-            if (actions.equals("0") || actions.equals(commandList.get(0))) {
-                print("applying blur effect");
-                BlurFilter file = new BlurFilter();
-                String filePath = "/Users/Gwenael/Desktop/packager/PictureBefore/geraltderiv.jpg";
-                file.smooth(filePath);
-            }
-            else if (actions.equals("1") || actions.equals(commandList.get(1))){
-                print("applying Black and White effect");
-
-<<<<<<< HEAD
-            }
-            else if (actions.equals("2") || actions.equals(commandList.get(2))){
-                print("applying Dilate effect");
-=======
-        String chemin =  "/Users/franceebbasta/Desktop/AllPicturs/plage.jpg";
-        BlurFilter blurFilter = new BlurFilter();
-
->>>>>>> master
-=======
-        List<IFilter> filterArray = new ArrayList<>();
-        filterArray.add(new BlurFilter());
-        filterArray.add(new BnWFilter());
-        filterArray.add(new DilateFilter());
-=======
-import java.io.File;
->>>>>>> master
-=======
->>>>>>> master
-
-        List<IFilter> filterArray = new ArrayList<>(); // liste des filtres a applliqué
-
-
-        String filterArg = "ce qui est en ligne de commande";
-        String[] split = filterArg.split("\\|");
-
-        for (String s : split){
-            switch (s){
+            String[] splitValue = s.split(":");         //on decoupe les quelques String restant (tel que Blur:3 et Dilate:10)
+            System.out.println(s + " puis " + splitValue[0]);
+            switch (splitValue[0]){
                 case "blur":
-                    filterArray.add(new BlurFilter());
+                    size = Integer.parseInt(splitValue[1]);         //on passe d'un String a un Integer
+                    filtersOptions.put(new BlurFilter(),size);
                     break;
                 case  "grayscale":
-                    filterArray.add(new BnWFilter());
+                    filtersOptions.put(new BnWFilter(),size);
                     break;
                 case  "dilate":
-                    filterArray.add(new DilateFilter());
+                    size = Integer.parseInt(splitValue[1]);
+                    filtersOptions.put(new DilateFilter(),size);
                     break;
             }
         }
 
+        return filtersOptions;
+    }
 
 
-        String dir = "/Users/franceebbasta/Desktop/packager/packager/packager/src/main/java/imageIn";
-        String dirOut = "/Users/franceebbasta/Desktop/packager/packager/packager/src/main/java/imageOut";
-
+    public static void usingFilters(Map<IFilter, Integer> filtersOptions){
+        String dir = "/Users/Gwenael/Desktop/packager/packager/packager/src/main/java/imageIn";
+        String dirOut = "/Users/Gwenael/Desktop/packager/packager/packager/src/main/java/imageOut";
         File rep = new File(dir);
         String liste[] = rep.list();
+
         if (liste != null){
-            for(int i =0; i<liste.length;i++){
-                IFilter blurFilter = new BlurFilter();
-                IFilter dilateFilter = new DilateFilter();
-                IFilter bnWFilter = new BnWFilter();
-                String cheminIn = dir + "/" +liste[i];
+
+            for(int i =0; i<liste.length;i++) {
+                String cheminIn = dir + "/" + liste[i];
                 String cheminOut = dirOut + "/" + liste[i];
 
                 try {
                     Mat img = imread(cheminIn);
-                    for (IFilter f : filterArray) {
-                        img = f.filter(img);
+                    for (Map.Entry<IFilter, Integer> entry : filtersOptions.entrySet()) {
+                        img = entry.getKey().filter(img, entry.getValue());
                     }
                     imwrite(cheminOut, img);
 
-                }catch (Exception e)
-                {
+                } catch (Exception e) {
                     System.out.println(e);
                 }
-
             }
-
-<<<<<<< HEAD
-        } while (!actions.equals("3"));
-
-=======
         }
-        else{
-            System.err.println("nom invalide");
-        }
-<<<<<<< HEAD
->>>>>>> filterStory5
->>>>>>> master
-=======
 
->>>>>>> master
 
     }
 }

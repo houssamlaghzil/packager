@@ -1,80 +1,20 @@
 package com.packager;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import org.bytedeco.opencv.opencv_core.Mat;
-<<<<<<< HEAD
 import org.bytedeco.opencv.opencv_core.Size;
 
 import static org.bytedeco.opencv.global.opencv_imgproc.*;
-<<<<<<< HEAD
-import static org.bytedeco.opencv.global.opencv_imgcodecs.*;
-
-
-public class BlurFilter<image> {
-
-    public void smooth(String filename) {
-        Mat image = imread(filename);
-        if (image != null) {
-            GaussianBlur(image, image, new Size(33, 33), 0);
-            imwrite(filename, image);
-        }
-        else
-        {
-            System.out.println("can't open this file");
-        }
-
-
-        }
-
-=======
-
-=======
-import org.bytedeco.opencv.opencv_core.*;
-=======
-import org.bytedeco.opencv.opencv_core.Mat;
->>>>>>> master
-import static org.bytedeco.opencv.global.opencv_imgcodecs.imread;
-import static org.bytedeco.opencv.global.opencv_imgcodecs.imwrite;
-=======
->>>>>>> master
-import static org.bytedeco.opencv.global.opencv_imgproc.*;
->>>>>>> master
-import org.bytedeco.opencv.opencv_core.Size;
-
 
 public class BlurFilter implements IFilter{
-    @Override
-<<<<<<< HEAD
 
-    public void filter(String fileIn, String fileOut) throws FilterException {
-        Mat img = imread(fileIn);
-<<<<<<< HEAD
-        int size = 3;
-<<<<<<< HEAD
-        Mat result = image.clone();
-        GaussianBlur(image, result, new Size(size, size), 0);
-        return result;
-    }
->>>>>>> master
-=======
-=======
-=======
-    public Mat filter(Mat img) throws FilterException {
->>>>>>> master
-        int size = 33;
->>>>>>> master
+    public Mat filter(Mat img, int size) throws FilterException {
+        //int size = 19;
         if(size%2==1) {
             GaussianBlur(img, img, new Size(size, size), 0);
         }
         else{
             throw new FilterException("you don't have enter a good size value");
-<<<<<<< HEAD
 
->>>>>>> master
-
-=======
->>>>>>> master
         }
         return img;
     }
