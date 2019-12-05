@@ -25,6 +25,11 @@ public abstract class AppFilter {
      */
     public static void main(String[] args) {
         System.out.println("application has started");
+    public static void main(String[] listeArguments) {
+
+        System.out.println(listeArguments[0]);
+
+
 
         CommandLineParser parser = new DefaultParser();
 
