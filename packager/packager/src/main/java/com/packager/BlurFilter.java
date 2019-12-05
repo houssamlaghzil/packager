@@ -23,7 +23,7 @@ public class BlurFilter implements IFilter{
             GaussianBlur(img, img, new Size(size, size), 0);
         }
         else{
-            throw new FilterException("you don't have enter a good size value");
+            throw new FilterException("you don't have enter a good size value, please use a positive int ");
         }
         return img;
     }

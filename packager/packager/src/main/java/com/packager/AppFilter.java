@@ -2,10 +2,17 @@ package com.packager;
 
 import org.apache.commons.cli.*;
 import org.bytedeco.opencv.opencv_core.Mat;
+import org.reflections.Reflections;
+import org.reflections.scanners.ResourcesScanner;
+import org.reflections.util.ClasspathHelper;
+import org.reflections.util.ConfigurationBuilder;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.lang.reflect.Member;
+import java.lang.reflect.Method;
 import java.util.*;
+import java.util.regex.Pattern;
 
 import static org.bytedeco.opencv.global.opencv_imgcodecs.imread;
 import static org.bytedeco.opencv.global.opencv_imgcodecs.imwrite;
@@ -24,11 +31,15 @@ public abstract class AppFilter {
         //program args:     -help -i src/main/java/imageIn -o src/main/java/imageOut -f blur:29|dilate:10|grayscale
 
 
-        List<String> listCommandArgs = createCLI(args);
-        Map<IFilter, Integer> filtersOptions = whichFilters( listCommandArgs );
-        usingFilters(filtersOptions , listCommandArgs);
+        try {
+            List<String> listCommandArgs = createCLI(args);
+            Map<IFilter, Integer> filtersOptions = whichFilters( listCommandArgs );
+            usingFilters(filtersOptions , listCommandArgs);
 
-        dumpLog(listCommandArgs.get(3));
+            dumpLog(listCommandArgs.get(3), listCommandArgs.get(4));
+        }catch (Exception e){
+            System.out.println(e);
+        }
 
 
     }
@@ -39,21 +50,25 @@ public abstract class AppFilter {
      * @param args  the program arguments, you can defined them by editing Configuration
      * @return      List : a String list used to have the in directory , out directory and all the filters arguments
      */
-    private static List<String> createCLI(String[] args){
+    private static List<String> createCLI(String[] args) throws FilterException {
         String dirIn=null;
         String dirOut=null;
         String filterArg=null;
+        boolean useConfig = false;
+        String logFile =null;
+        String iniFile = null;
 
         HelpFormatter formatter = new HelpFormatter();
         List<String> listCommandArgs = new ArrayList<>();
         String printLogger = "false";
 
         Options options = new Options();
-        options.addOption("h", "help", false, "")
-                .addOption("i", "input", true, "-dir <directory>")
-                .addOption("o", "output", true, "-dir <directory>")
+        options.addOption("h", "--help", false, "")
+                .addOption("i", "input-dir", true, "<directory>")
+                .addOption("o", "output-dir", true, "<directory>")
                 .addOption("f", "filters", true, "filters options")
-                .addOption("l", "logfile", false, "-file image.log")
+                .addOption("l", "log-file", true, "<File> *.log")
+                .addOption("c", "config-file", true, "<File> *.ini")
         ;
 
 
@@ -61,48 +76,60 @@ public abstract class AppFilter {
         try {
             CommandLine cmd = parser.parse(options, args);
             if(cmd.hasOption("h")){
-                System.out.println("help option was used");
                 formatter.printHelp("imageFilter", options);
             }
             if(cmd.hasOption("i")){
-                System.out.println("input option was used");
                 dirIn = cmd.getOptionValue("i");
             }
             if(cmd.hasOption("o")){
-                System.out.println("output option was used");
                 dirOut = cmd.getOptionValue("o");
             }
             if(cmd.hasOption("f")){
-                System.out.println("filters selected was => " + cmd.getOptionValue("f"));
                 filterArg = cmd.getOptionValue(("f"));
             }
             if(cmd.hasOption("l")){
-                System.out.println("logger option selected ");
                 printLogger = "true";
+                logFile = cmd.getOptionValue("l");
             }
+            if(cmd.hasOption("c")){
+                useConfig = true;
+                iniFile = cmd.getOptionValue("c");
+            }
+
+
         }catch (Exception e ){
-            System.out.println(e);
+            System.out.println(e + "\nhere the command you can use:");
+            formatter.printHelp("AppFilter", options);
         }
 
-        OpenIni open = new OpenIni();
-        try{
-        List<String> listIni = open.openIni("src/config.ini");
-        dirIn = listIni.get(0);
-        dirOut = listIni.get(1);
-        filterArg = listIni.get(2);
-        }catch (Exception e){
-            System.out.println(e);
+        if (useConfig) {
+            OpenIni open = new OpenIni();
+            try {
+                List<String> listIni = open.openIni(iniFile);
+                dirIn = listIni.get(0);
+                dirOut = listIni.get(1);
+                filterArg = listIni.get(2);
+                logFile = listIni.get(3);
+            } catch (Exception e) {
+                System.out.println(e);
+            }
         }
-
 
 
         listCommandArgs.add(dirIn);
         listCommandArgs.add(dirOut);
         listCommandArgs.add( filterArg);
         listCommandArgs.add( printLogger);
+        listCommandArgs.add(logFile);
 
+        if (listCommandArgs.contains(null))
+        {
+            throw new FilterException("you don't have specified enough argument to use AppFilter");
+        }
+        else{
+            return listCommandArgs;
+        }
 
-        return listCommandArgs;
     }
 
 
@@ -112,35 +139,49 @@ public abstract class AppFilter {
      * @param listCommandArgs   List : a String list used here to have all the filters arguments
      * @return                  Map : containing all filter's type and their effect's power
      */
-    private static Map<IFilter, Integer> whichFilters(List<String> listCommandArgs){
-        Map<IFilter, Integer> filtersOptions = new HashMap<>();
+    private static Map<IFilter, Integer> whichFilters(List<String> listCommandArgs) throws FilterException {
         int size = 0;
+        Map<IFilter, Integer> filtersOptions = new HashMap<>();
         FilterLogger logger = new FilterLoggerFile();
-
         String[] splitFilters = listCommandArgs.get(2).split("\\|");
 
         for (String s : splitFilters){
-
             String[] splitValue = s.split(":");
-            switch (splitValue[0]){
+
+            switch (splitValue[0]) {
                 case "blur":
-                    size = Integer.parseInt(splitValue[1]);
-                    filtersOptions.put(new BlurFilter(),size);
-                    logger.log( " you want to apply " + splitValue[0] +". value: " + splitValue[1]);
+                    try {
+                        size = Integer.parseInt(splitValue[1]);
+                        filtersOptions.put(new BlurFilter(), size);
+                        logger.log(" you want to apply " + splitValue[0] + ". value: " + splitValue[1]);
+                    }catch (Exception e) {
+                        throw new FilterException("you don't give valid value for filters: " + splitValue[0]);
+                        }
                     break;
-                case  "grayscale":
-                    filtersOptions.put(new BnWFilter(),size);
+                case "grayscale":
+                    filtersOptions.put(new BnWFilter(), 0);
                     logger.log(" you want to apply " + splitValue[0]);
                     break;
-                case  "dilate":
-                    size = Integer.parseInt(splitValue[1]);
-                    filtersOptions.put(new DilateFilter(),size);
-                    logger.log( " you want to apply " + splitValue[0] +". value: " + splitValue[1]);
+                case "dilate":
+                    try {
+                        size = Integer.parseInt(splitValue[1]);
+                        filtersOptions.put(new DilateFilter(), size);
+                        logger.log(" you want to apply " + splitValue[0] + ". value: " + splitValue[1]);
+                    }catch (Exception e){
+                        throw new FilterException("you don't give valid value for filters: " + splitValue[0]);
+                    }
                     break;
             }
+
         }
 
-        return filtersOptions;
+
+        if(filtersOptions.isEmpty()){
+            throw new FilterException(" you don't have entered valid filter options");
+        }
+        else {
+            return filtersOptions;
+        }
     }
 
 
@@ -193,8 +234,8 @@ public abstract class AppFilter {
      * this method print the contents from AppFilter.log
      * @param printLogger   String : used to know if the user want to print the content or not
      */
-    private static void dumpLog(String printLogger) {
-        File f = new File("AppFilter.log");
+    private static void dumpLog(String printLogger, String pathName) {
+        File f = new File(pathName);
         f.exists();
 
         if (printLogger.equals("true")) {
@@ -207,8 +248,8 @@ public abstract class AppFilter {
                 }
                 myReader.close();
 
-            } catch (FileNotFoundException e) {
-                System.out.println("An error occurred.");
+            } catch (Exception e) {
+                System.out.println("An error occurred when opening file.");
                 e.printStackTrace();
             }
         }
