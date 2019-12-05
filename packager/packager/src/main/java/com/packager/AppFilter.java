@@ -71,7 +71,7 @@ public abstract class AppFilter {
             }
         }
 
-        return filtersOptions;
+       
     }
 
 
