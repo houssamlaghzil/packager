@@ -53,3 +53,285 @@
 2019/12/05 17:00:47 => applying dilate filter, 	value: 10 on plage.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
 2019/12/05 17:00:47 => applying Blur filter, 	value: 29 on plage.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
 2019/12/05 17:00:47 => applying black n'white filter on plage.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:11:01 you want to apply blur. value: 29
+2019/12/05 17:11:01 you want to apply dilate. value: 10
+2019/12/05 17:11:01 you want to apply grayscale
+2019/12/05 17:11:05 => applying Blur filter, 	value: 29 on IMG_4315.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:11:05 => applying black n'white filter on IMG_4315.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:11:05 => applying dilate filter, 	value: 10 on IMG_4315.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:11:05 => applying Blur filter, 	value: 29 on granny_wtf.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:11:05 => applying black n'white filter on granny_wtf.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:11:05 => applying dilate filter, 	value: 10 on granny_wtf.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:11:05 => applying Blur filter, 	value: 29 on marioArretDroite.png from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:11:05 => applying black n'white filter on marioArretDroite.png from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:11:05 => applying dilate filter, 	value: 10 on marioArretDroite.png from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:11:05 => applying Blur filter, 	value: 29 on fondEcran.png from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:11:05 => applying black n'white filter on fondEcran.png from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:11:05 => applying dilate filter, 	value: 10 on fondEcran.png from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:11:05 => applying Blur filter, 	value: 29 on plage.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:11:05 => applying black n'white filter on plage.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:11:05 => applying dilate filter, 	value: 10 on plage.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:11:24 you want to apply blur. value: 29
+2019/12/05 17:11:24 you want to apply dilate. value: 10
+2019/12/05 17:11:24 you want to apply grayscale
+2019/12/05 17:11:28 => applying Blur filter, 	value: 29 on IMG_4315.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:11:28 => applying black n'white filter on IMG_4315.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:11:28 => applying dilate filter, 	value: 10 on IMG_4315.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:11:28 => applying Blur filter, 	value: 29 on granny_wtf.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:11:28 => applying black n'white filter on granny_wtf.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:11:28 => applying dilate filter, 	value: 10 on granny_wtf.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:11:28 => applying Blur filter, 	value: 29 on marioArretDroite.png from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:11:28 => applying black n'white filter on marioArretDroite.png from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:11:28 => applying dilate filter, 	value: 10 on marioArretDroite.png from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:11:28 => applying Blur filter, 	value: 29 on fondEcran.png from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:11:28 => applying black n'white filter on fondEcran.png from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:11:28 => applying dilate filter, 	value: 10 on fondEcran.png from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:11:28 => applying Blur filter, 	value: 29 on plage.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:11:28 => applying black n'white filter on plage.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:11:28 => applying dilate filter, 	value: 10 on plage.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:12:09 you want to apply blur. value: 29
+2019/12/05 17:12:09 you want to apply dilate. value: 10
+2019/12/05 17:12:09 you want to apply grayscale
+2019/12/05 17:12:12 => applying Blur filter, 	value: 29 on IMG_4315.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:12:12 => applying black n'white filter on IMG_4315.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:12:12 => applying dilate filter, 	value: 10 on IMG_4315.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:12:12 => applying Blur filter, 	value: 29 on granny_wtf.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:12:12 => applying black n'white filter on granny_wtf.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:12:12 => applying dilate filter, 	value: 10 on granny_wtf.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:12:12 => applying Blur filter, 	value: 29 on marioArretDroite.png from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:12:12 => applying black n'white filter on marioArretDroite.png from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:12:12 => applying dilate filter, 	value: 10 on marioArretDroite.png from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:12:12 => applying Blur filter, 	value: 29 on fondEcran.png from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:12:12 => applying black n'white filter on fondEcran.png from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:12:12 => applying dilate filter, 	value: 10 on fondEcran.png from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:12:12 => applying Blur filter, 	value: 29 on plage.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:12:12 => applying black n'white filter on plage.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:12:12 => applying dilate filter, 	value: 10 on plage.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:14:38 you want to apply blur. value: 29
+2019/12/05 17:14:38 you want to apply dilate. value: 10
+2019/12/05 17:14:38 you want to apply grayscale
+2019/12/05 17:14:42 => applying Blur filter, 	value: 29 on IMG_4315.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:14:42 => applying dilate filter, 	value: 10 on IMG_4315.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:14:42 => applying black n'white filter on IMG_4315.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:14:42 => applying Blur filter, 	value: 29 on granny_wtf.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:14:42 => applying dilate filter, 	value: 10 on granny_wtf.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:14:42 => applying black n'white filter on granny_wtf.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:14:42 => applying Blur filter, 	value: 29 on marioArretDroite.png from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:14:42 => applying dilate filter, 	value: 10 on marioArretDroite.png from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:14:42 => applying black n'white filter on marioArretDroite.png from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:14:42 => applying Blur filter, 	value: 29 on fondEcran.png from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:14:42 => applying dilate filter, 	value: 10 on fondEcran.png from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:14:42 => applying black n'white filter on fondEcran.png from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:14:42 => applying Blur filter, 	value: 29 on plage.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:14:42 => applying dilate filter, 	value: 10 on plage.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:14:42 => applying black n'white filter on plage.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:14:56 you want to apply blur. value: 29
+2019/12/05 17:14:56 you want to apply dilate. value: 10
+2019/12/05 17:14:56 you want to apply grayscale
+2019/12/05 17:15:00 => applying dilate filter, 	value: 10 on IMG_4315.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:15:00 => applying Blur filter, 	value: 29 on IMG_4315.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:15:00 => applying black n'white filter on IMG_4315.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:15:00 => applying dilate filter, 	value: 10 on granny_wtf.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:15:00 => applying Blur filter, 	value: 29 on granny_wtf.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:15:00 => applying black n'white filter on granny_wtf.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:15:00 => applying dilate filter, 	value: 10 on marioArretDroite.png from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:15:00 => applying Blur filter, 	value: 29 on marioArretDroite.png from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:15:00 => applying black n'white filter on marioArretDroite.png from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:15:00 => applying dilate filter, 	value: 10 on fondEcran.png from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:15:00 => applying Blur filter, 	value: 29 on fondEcran.png from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:15:00 => applying black n'white filter on fondEcran.png from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:15:00 => applying dilate filter, 	value: 10 on plage.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:15:00 => applying Blur filter, 	value: 29 on plage.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:15:00 => applying black n'white filter on plage.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:15:33 you want to apply blur. value: 29
+2019/12/05 17:15:33 you want to apply dilate. value: 10
+2019/12/05 17:15:33 you want to apply grayscale
+2019/12/05 17:15:37 => applying dilate filter, 	value: 10 on IMG_4315.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:15:37 => applying Blur filter, 	value: 29 on IMG_4315.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:15:37 => applying black n'white filter on IMG_4315.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:15:37 => applying dilate filter, 	value: 10 on granny_wtf.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:15:37 => applying Blur filter, 	value: 29 on granny_wtf.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:15:37 => applying black n'white filter on granny_wtf.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:15:37 => applying dilate filter, 	value: 10 on marioArretDroite.png from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:15:37 => applying Blur filter, 	value: 29 on marioArretDroite.png from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:15:37 => applying black n'white filter on marioArretDroite.png from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:15:37 => applying dilate filter, 	value: 10 on fondEcran.png from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:15:37 => applying Blur filter, 	value: 29 on fondEcran.png from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:15:37 => applying black n'white filter on fondEcran.png from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:15:37 => applying dilate filter, 	value: 10 on plage.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:15:37 => applying Blur filter, 	value: 29 on plage.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:15:37 => applying black n'white filter on plage.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:17:32 you want to apply blur. value: 29
+2019/12/05 17:17:32 you want to apply dilate. value: 10
+2019/12/05 17:17:32 you want to apply grayscale
+2019/12/05 17:17:36 => applying dilate filter, 	value: 10 on IMG_4315.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:17:36 => applying Blur filter, 	value: 29 on IMG_4315.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:17:36 => applying black n'white filter on IMG_4315.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:17:36 => applying dilate filter, 	value: 10 on granny_wtf.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:17:36 => applying Blur filter, 	value: 29 on granny_wtf.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:17:36 => applying black n'white filter on granny_wtf.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:17:36 => applying dilate filter, 	value: 10 on marioArretDroite.png from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:17:36 => applying Blur filter, 	value: 29 on marioArretDroite.png from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:17:36 => applying black n'white filter on marioArretDroite.png from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:17:36 => applying dilate filter, 	value: 10 on fondEcran.png from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:17:36 => applying Blur filter, 	value: 29 on fondEcran.png from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:17:36 => applying black n'white filter on fondEcran.png from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:17:36 => applying dilate filter, 	value: 10 on plage.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:17:36 => applying Blur filter, 	value: 29 on plage.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:17:36 => applying black n'white filter on plage.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:32:51 you want to apply blur. value: 29
+2019/12/05 17:32:51 you want to apply dilate. value: 10
+2019/12/05 17:32:51 you want to apply grayscale
+2019/12/05 17:32:55 => applying black n'white filter on IMG_4315.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:32:55 => applying dilate filter, 	value: 10 on IMG_4315.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:32:55 => applying Blur filter, 	value: 29 on IMG_4315.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:32:56 => applying black n'white filter on granny_wtf.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:32:56 => applying dilate filter, 	value: 10 on granny_wtf.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:32:56 => applying Blur filter, 	value: 29 on granny_wtf.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:32:56 => applying black n'white filter on marioArretDroite.png from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:32:56 => applying dilate filter, 	value: 10 on marioArretDroite.png from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:32:56 => applying Blur filter, 	value: 29 on marioArretDroite.png from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:32:56 => applying black n'white filter on fondEcran.png from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:32:56 => applying dilate filter, 	value: 10 on fondEcran.png from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:32:56 => applying Blur filter, 	value: 29 on fondEcran.png from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:32:56 => applying black n'white filter on plage.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:32:56 => applying dilate filter, 	value: 10 on plage.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:32:56 => applying Blur filter, 	value: 29 on plage.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:33:21 you want to apply blur. value: 29
+2019/12/05 17:33:21 you want to apply dilate. value: 10
+2019/12/05 17:33:21 you want to apply grayscale
+2019/12/05 17:33:23 => applying black n'white filter on IMG_4315.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:33:24 => applying dilate filter, 	value: 10 on IMG_4315.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:33:24 => applying Blur filter, 	value: 29 on IMG_4315.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:33:24 => applying black n'white filter on granny_wtf.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:33:24 => applying dilate filter, 	value: 10 on granny_wtf.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:33:24 => applying Blur filter, 	value: 29 on granny_wtf.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:33:24 => applying black n'white filter on marioArretDroite.png from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:33:24 => applying dilate filter, 	value: 10 on marioArretDroite.png from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:33:24 => applying Blur filter, 	value: 29 on marioArretDroite.png from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:33:24 => applying black n'white filter on fondEcran.png from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:33:24 => applying dilate filter, 	value: 10 on fondEcran.png from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:33:24 => applying Blur filter, 	value: 29 on fondEcran.png from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:33:24 => applying black n'white filter on plage.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:33:24 => applying dilate filter, 	value: 10 on plage.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:33:24 => applying Blur filter, 	value: 29 on plage.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:34:15 you want to apply blur. value: 3
+2019/12/05 17:34:15 you want to apply grayscale
+2019/12/05 17:34:18 => applying black n'white filter on IMG_4315.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory output 	(output).
+2019/12/05 17:34:19 => applying Blur filter, 	value: 3 on IMG_4315.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory output 	(output).
+2019/12/05 17:34:19 => applying black n'white filter on granny_wtf.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory output 	(output).
+2019/12/05 17:34:19 => applying Blur filter, 	value: 3 on granny_wtf.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory output 	(output).
+2019/12/05 17:34:19 => applying black n'white filter on marioArretDroite.png from Directory imageIn 	(src/main/java/imageIn). 			save in directory output 	(output).
+2019/12/05 17:34:19 => applying Blur filter, 	value: 3 on marioArretDroite.png from Directory imageIn 	(src/main/java/imageIn). 			save in directory output 	(output).
+2019/12/05 17:34:19 => applying black n'white filter on fondEcran.png from Directory imageIn 	(src/main/java/imageIn). 			save in directory output 	(output).
+2019/12/05 17:34:19 => applying Blur filter, 	value: 3 on fondEcran.png from Directory imageIn 	(src/main/java/imageIn). 			save in directory output 	(output).
+2019/12/05 17:34:19 => applying black n'white filter on plage.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory output 	(output).
+2019/12/05 17:34:19 => applying Blur filter, 	value: 3 on plage.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory output 	(output).
+2019/12/05 17:37:44 you want to apply blur. value: 3
+2019/12/05 17:37:44 you want to apply grayscale
+2019/12/05 17:37:48 => applying black n'white filter on IMG_4315.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory output 	(output).
+2019/12/05 17:37:48 => applying Blur filter, 	value: 3 on IMG_4315.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory output 	(output).
+2019/12/05 17:37:48 => applying black n'white filter on granny_wtf.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory output 	(output).
+2019/12/05 17:37:48 => applying Blur filter, 	value: 3 on granny_wtf.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory output 	(output).
+2019/12/05 17:37:48 => applying black n'white filter on marioArretDroite.png from Directory imageIn 	(src/main/java/imageIn). 			save in directory output 	(output).
+2019/12/05 17:37:48 => applying Blur filter, 	value: 3 on marioArretDroite.png from Directory imageIn 	(src/main/java/imageIn). 			save in directory output 	(output).
+2019/12/05 17:37:48 => applying black n'white filter on fondEcran.png from Directory imageIn 	(src/main/java/imageIn). 			save in directory output 	(output).
+2019/12/05 17:37:48 => applying Blur filter, 	value: 3 on fondEcran.png from Directory imageIn 	(src/main/java/imageIn). 			save in directory output 	(output).
+2019/12/05 17:37:48 => applying black n'white filter on plage.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory output 	(output).
+2019/12/05 17:37:48 => applying Blur filter, 	value: 3 on plage.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory output 	(output).
+2019/12/05 17:39:16 you want to apply blur. value: 3
+2019/12/05 17:39:16 you want to apply grayscale
+2019/12/05 17:39:19 => applying black n'white filter on IMG_4315.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory output 	(output).
+2019/12/05 17:39:20 => applying Blur filter, 	value: 3 on IMG_4315.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory output 	(output).
+2019/12/05 17:39:20 => applying black n'white filter on granny_wtf.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory output 	(output).
+2019/12/05 17:39:20 => applying Blur filter, 	value: 3 on granny_wtf.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory output 	(output).
+2019/12/05 17:39:20 => applying black n'white filter on marioArretDroite.png from Directory imageIn 	(src/main/java/imageIn). 			save in directory output 	(output).
+2019/12/05 17:39:20 => applying Blur filter, 	value: 3 on marioArretDroite.png from Directory imageIn 	(src/main/java/imageIn). 			save in directory output 	(output).
+2019/12/05 17:39:20 => applying black n'white filter on fondEcran.png from Directory imageIn 	(src/main/java/imageIn). 			save in directory output 	(output).
+2019/12/05 17:39:20 => applying Blur filter, 	value: 3 on fondEcran.png from Directory imageIn 	(src/main/java/imageIn). 			save in directory output 	(output).
+2019/12/05 17:39:20 => applying black n'white filter on plage.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory output 	(output).
+2019/12/05 17:39:20 => applying Blur filter, 	value: 3 on plage.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory output 	(output).
+2019/12/05 17:39:41 you want to apply blur. value: 3
+2019/12/05 17:39:41 you want to apply grayscale
+2019/12/05 17:39:44 => applying black n'white filter on IMG_4315.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:39:45 => applying Blur filter, 	value: 3 on IMG_4315.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:39:45 => applying black n'white filter on granny_wtf.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:39:45 => applying Blur filter, 	value: 3 on granny_wtf.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:39:45 => applying black n'white filter on marioArretDroite.png from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:39:45 => applying Blur filter, 	value: 3 on marioArretDroite.png from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:39:45 => applying black n'white filter on fondEcran.png from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:39:45 => applying Blur filter, 	value: 3 on fondEcran.png from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:39:45 => applying black n'white filter on plage.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:39:45 => applying Blur filter, 	value: 3 on plage.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:40:12 you want to apply blur. value: 19
+2019/12/05 17:40:12 you want to apply grayscale
+2019/12/05 17:40:15 => applying black n'white filter on IMG_4315.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:40:15 => applying Blur filter, 	value: 19 on IMG_4315.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:40:15 => applying black n'white filter on granny_wtf.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:40:15 => applying Blur filter, 	value: 19 on granny_wtf.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:40:15 => applying black n'white filter on marioArretDroite.png from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:40:15 => applying Blur filter, 	value: 19 on marioArretDroite.png from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:40:15 => applying black n'white filter on fondEcran.png from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:40:15 => applying Blur filter, 	value: 19 on fondEcran.png from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:40:15 => applying black n'white filter on plage.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:40:15 => applying Blur filter, 	value: 19 on plage.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:41:12 you want to apply blur. value: 19
+2019/12/05 17:41:12 you want to apply grayscale
+2019/12/05 17:41:15 => applying black n'white filter on IMG_4315.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:41:15 => applying Blur filter, 	value: 19 on IMG_4315.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:41:15 => applying black n'white filter on granny_wtf.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:41:15 => applying Blur filter, 	value: 19 on granny_wtf.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:41:15 => applying black n'white filter on marioArretDroite.png from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:41:15 => applying Blur filter, 	value: 19 on marioArretDroite.png from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:41:15 => applying black n'white filter on fondEcran.png from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:41:15 => applying Blur filter, 	value: 19 on fondEcran.png from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:41:15 => applying black n'white filter on plage.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:41:15 => applying Blur filter, 	value: 19 on plage.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:41:23 you want to apply blur. value: 19
+2019/12/05 17:41:23 you want to apply grayscale
+2019/12/05 17:41:26 => applying black n'white filter on IMG_4315.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:41:27 => applying Blur filter, 	value: 19 on IMG_4315.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:41:27 => applying black n'white filter on granny_wtf.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:41:27 => applying Blur filter, 	value: 19 on granny_wtf.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:41:27 => applying black n'white filter on marioArretDroite.png from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:41:27 => applying Blur filter, 	value: 19 on marioArretDroite.png from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:41:27 => applying black n'white filter on fondEcran.png from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:41:27 => applying Blur filter, 	value: 19 on fondEcran.png from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:41:27 => applying black n'white filter on plage.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:41:27 => applying Blur filter, 	value: 19 on plage.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:41:54 you want to apply blur. value: 19
+2019/12/05 17:41:54 you want to apply grayscale
+2019/12/05 17:41:57 => applying black n'white filter on IMG_4315.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:41:58 => applying Blur filter, 	value: 19 on IMG_4315.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:41:58 => applying black n'white filter on granny_wtf.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:41:58 => applying Blur filter, 	value: 19 on granny_wtf.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:41:58 => applying black n'white filter on marioArretDroite.png from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:41:58 => applying Blur filter, 	value: 19 on marioArretDroite.png from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:41:58 => applying black n'white filter on fondEcran.png from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:41:58 => applying Blur filter, 	value: 19 on fondEcran.png from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:41:58 => applying black n'white filter on plage.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:41:58 => applying Blur filter, 	value: 19 on plage.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:42:06 you want to apply blur. value: 19
+2019/12/05 17:42:06 you want to apply grayscale
+2019/12/05 17:42:10 => applying black n'white filter on IMG_4315.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:42:10 => applying Blur filter, 	value: 19 on IMG_4315.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:42:10 => applying black n'white filter on granny_wtf.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:42:10 => applying Blur filter, 	value: 19 on granny_wtf.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:42:10 => applying black n'white filter on marioArretDroite.png from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:42:10 => applying Blur filter, 	value: 19 on marioArretDroite.png from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:42:10 => applying black n'white filter on fondEcran.png from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:42:10 => applying Blur filter, 	value: 19 on fondEcran.png from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:42:10 => applying black n'white filter on plage.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:42:10 => applying Blur filter, 	value: 19 on plage.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:47:24 you want to apply blur. value: 19
+2019/12/05 17:47:24 you want to apply grayscale
+2019/12/05 17:47:27 => applying black n'white filter on IMG_4315.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:47:28 => applying Blur filter, 	value: 19 on IMG_4315.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:47:28 => applying black n'white filter on granny_wtf.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:47:28 => applying Blur filter, 	value: 19 on granny_wtf.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:47:28 => applying black n'white filter on marioArretDroite.png from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:47:28 => applying Blur filter, 	value: 19 on marioArretDroite.png from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:47:28 => applying black n'white filter on fondEcran.png from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:47:28 => applying Blur filter, 	value: 19 on fondEcran.png from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:47:28 => applying black n'white filter on plage.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).
+2019/12/05 17:47:28 => applying Blur filter, 	value: 19 on plage.jpg from Directory imageIn 	(src/main/java/imageIn). 			save in directory imageOut 	(src/main/java/imageOut).

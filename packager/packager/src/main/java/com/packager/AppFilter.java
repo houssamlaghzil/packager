@@ -21,15 +21,8 @@ public abstract class AppFilter {
      */
     public static void main(String[] args) {
         System.out.println("application has started");
+        //program args:     -help -i src/main/java/imageIn -o src/main/java/imageOut -f blur:29|dilate:10|grayscale
 
-        OpenIni open = new OpenIni();
-        try {
-            open.openIni();
-
-        }catch (Exception e)
-        {
-            System.out.println(e);
-        }
 
         List<String> listCommandArgs = createCLI(args);
         Map<IFilter, Integer> filtersOptions = whichFilters( listCommandArgs );
@@ -47,14 +40,13 @@ public abstract class AppFilter {
      * @return      List : a String list used to have the in directory , out directory and all the filters arguments
      */
     private static List<String> createCLI(String[] args){
-        String filterArg = "";
-        String dirIn = "src/main/java/imageIn";
-        String dirOut = "src/main/java/imageOut";
+        String dirIn=null;
+        String dirOut=null;
+        String filterArg=null;
 
         HelpFormatter formatter = new HelpFormatter();
         List<String> listCommandArgs = new ArrayList<>();
         String printLogger = "false";
-
 
         Options options = new Options();
         options.addOption("h", "help", false, "")
@@ -91,6 +83,18 @@ public abstract class AppFilter {
         }catch (Exception e ){
             System.out.println(e);
         }
+
+        OpenIni open = new OpenIni();
+        try{
+        List<String> listIni = open.openIni("src/config.ini");
+        dirIn = listIni.get(0);
+        dirOut = listIni.get(1);
+        filterArg = listIni.get(2);
+        }catch (Exception e){
+            System.out.println(e);
+        }
+
+
 
         listCommandArgs.add(dirIn);
         listCommandArgs.add(dirOut);
