@@ -41,7 +41,7 @@ public abstract class AppFilter {
         String dirOut = "/Users/Gwenael/Desktop/packager/packager/packager/src/main/java/imageOut";
 
         HelpFormatter formatter = new HelpFormatter();
-        List<String> listCommandArgs = new ArrayList();
+        List<String> listCommandArgs = new ArrayList<>();
 
 
         Options options = new Options();
@@ -133,9 +133,15 @@ public abstract class AppFilter {
      * @param listCommandArgs   List : a String list used here to have the in directory and the out directory
      */
     public static void usingFilters(Map<IFilter, Integer> filtersOptions, List<String> listCommandArgs){
-        String dir = listCommandArgs.get(0);
+        String dirIn = listCommandArgs.get(0);
+        String dirInTab[] = dirIn.split("/");
+        String dirInRac = dirInTab[dirInTab.length-1];
+
         String dirOut = listCommandArgs.get(1);
-        File rep = new File(dir);
+        String dirOutTab[] = dirOut.split("/");
+        String dirOutRac = dirOutTab[dirOutTab.length-1];
+
+        File rep = new File(dirIn);
         String liste[] = rep.list();
 
         FilterLogger logger = new FilterLoggerFile();
@@ -145,14 +151,15 @@ public abstract class AppFilter {
         if (liste != null){
 
             for(int i =0; i<liste.length;i++) {
-                String pathIn = dir + "/" + liste[i];
+                String pathIn = dirIn + "/" + liste[i];
                 String pathOut = dirOut + "/" + liste[i];
 
                 try {
                     Mat img = imread(pathIn);
                     for (Map.Entry<IFilter, Integer> entry : filtersOptions.entrySet()) {
                         img = entry.getKey().filter(img, entry.getValue());
-                        logger.log(format.format(date)  + " => " + entry.getKey().logDescription(entry.getValue()) + " on " + liste[i]);
+                        String beginMessage = format.format(date)  + " => " + entry.getKey().logDescription(entry.getValue()) + " on " + liste[i];
+                        logger.log(beginMessage + " from Directory " + dirInRac + " \t(" + dirIn + "). \t\t\tsave in directory " + dirOutRac + " \t(" +  dirOut + ").");
                     }
                     imwrite(pathOut, img);
 
