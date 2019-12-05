@@ -25,6 +25,11 @@ public class BnWFilter implements IFilter {
 
     }
 
+    /**
+     * this method return a description of this filter
+     * @param value     int : not used for now
+     * @return          String : containing the description
+     */
     @Override
     public String logDescription(int value) {
         return "applying black n'white filter";

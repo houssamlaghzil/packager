@@ -23,6 +23,11 @@ public class DilateFilter implements IFilter {
 
     }
 
+    /**
+     * this method return a description of this filter
+     * @param value     int : the effect's power
+     * @return          String : containing the description
+     */
     @Override
     public String logDescription(int value) {
         return "applying dilate filter, \tvalue: " + value;

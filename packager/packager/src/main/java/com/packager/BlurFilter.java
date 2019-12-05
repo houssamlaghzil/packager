@@ -28,6 +28,11 @@ public class BlurFilter implements IFilter{
         return img;
     }
 
+    /**
+     * this method return a description of this filter
+     * @param value     int : the effect's power
+     * @return          String : containing the description
+     */
     @Override
     public String logDescription(int value) {
         return "applying Blur filter, \tvalue: " + value;
