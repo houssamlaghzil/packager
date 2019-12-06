@@ -3,17 +3,9 @@ package com.packager;
 import org.apache.commons.cli.*;
 import org.bytedeco.opencv.opencv_core.Mat;
 import org.reflections.Reflections;
-import org.reflections.scanners.ResourcesScanner;
-import org.reflections.util.ClasspathHelper;
-import org.reflections.util.ConfigurationBuilder;
 
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.lang.reflect.Member;
-import java.lang.reflect.Method;
 import java.util.*;
-import java.util.regex.Pattern;
-
 import static org.bytedeco.opencv.global.opencv_imgcodecs.imread;
 import static org.bytedeco.opencv.global.opencv_imgcodecs.imwrite;
 
@@ -29,7 +21,7 @@ public abstract class AppFilter {
     public static void main(String[] args) {
         System.out.println("application has started");
         //program args:     -help -i src/main/java/imageIn -o src/main/java/imageOut -f blur:29|dilate:10|grayscale
-
+        //                  -h -i src/main/java/imageIn  -o src/main/java/imageOut -f blur:15 -c src/config.ini -lf -l src/AppFilter.log
 
         try {
             List<String> listCommandArgs = createCLI(args);
@@ -41,20 +33,23 @@ public abstract class AppFilter {
             System.out.println(e);
         }
 
-
     }
 
 
     /**
-     * this method generate the CLI and get all the information we need from the program arguments
+     * this method generate the CLI, get all the information we need from the program arguments and give them thanks to a List containing all
+     * important information related to the entered arguments.
+     * need to have input dir, output dir, filter args, log filename
      * @param args  the program arguments, you can defined them by editing Configuration
-     * @return      List : a String list used to have the in directory , out directory and all the filters arguments
+     * @return      List : a String list used to have the in directory , out directory, all the filters arguments, information if we want
+     * to see the log file
      */
     private static List<String> createCLI(String[] args) throws FilterException {
         String dirIn=null;
         String dirOut=null;
         String filterArg=null;
         boolean useConfig = false;
+
         String logFile =null;
         String iniFile = null;
 
@@ -62,6 +57,26 @@ public abstract class AppFilter {
         List<String> listCommandArgs = new ArrayList<>();
         String printLogger = "false";
 
+        //region filters list generator
+        Reflections reflections = new Reflections(IFilter.class);
+        List<String> filterListRaw = new ArrayList<>();
+        List<String> filterList = new ArrayList<>();
+
+        Set<Class<? extends IFilter>> subTypes = reflections.getSubTypesOf(IFilter.class);
+        String[] subTypesString = subTypes.toString().split("\\,");
+        for(String s : subTypesString){
+            String [] splited = s.split("\\.");
+            filterListRaw.add(splited[splited.length-1]);
+
+        }
+        for(String s : filterListRaw){
+            String [] splited = s.split("]");
+            filterList.add(splited[0]);
+        }
+        //endregion
+
+
+        //region CLI generator
         Options options = new Options();
         options.addOption("h", "--help", false, "")
                 .addOption("i", "input-dir", true, "<directory>")
@@ -69,8 +84,8 @@ public abstract class AppFilter {
                 .addOption("f", "filters", true, "filters options")
                 .addOption("l", "log-file", true, "<File> *.log")
                 .addOption("c", "config-file", true, "<File> *.ini")
+                .addOption("lf", "list-filters", false, "show filters list")
         ;
-
 
         CommandLineParser parser = new DefaultParser();
         try {
@@ -95,12 +110,18 @@ public abstract class AppFilter {
                 useConfig = true;
                 iniFile = cmd.getOptionValue("c");
             }
-
+            if(cmd.hasOption("lf")){
+                for(String s : filterList){
+                    System.out.println("=> " + s);
+                }
+            }
 
         }catch (Exception e ){
             System.out.println(e + "\nhere the command you can use:");
             formatter.printHelp("AppFilter", options);
         }
+        //endregion
+
 
         if (useConfig) {
             OpenIni open = new OpenIni();
@@ -144,6 +165,7 @@ public abstract class AppFilter {
         Map<IFilter, Integer> filtersOptions = new HashMap<>();
         FilterLogger logger = new FilterLoggerFile();
         String[] splitFilters = listCommandArgs.get(2).split("\\|");
+        String logfile = listCommandArgs.get(4);
 
         for (String s : splitFilters){
             String[] splitValue = s.split(":");
@@ -153,26 +175,37 @@ public abstract class AppFilter {
                     try {
                         size = Integer.parseInt(splitValue[1]);
                         filtersOptions.put(new BlurFilter(), size);
-                        logger.log(" you want to apply " + splitValue[0] + ". value: " + splitValue[1]);
+                        logger.log(" you want to apply " + splitValue[0] + ". value: " + splitValue[1], logfile);
                     }catch (Exception e) {
-                        throw new FilterException("you don't give valid value for filters: " + splitValue[0]);
+                        System.out.println("you don't give valid value for filters: " + splitValue[0]);
                         }
                     break;
+
                 case "grayscale":
                     filtersOptions.put(new BnWFilter(), 0);
-                    logger.log(" you want to apply " + splitValue[0]);
+                    logger.log(" you want to apply " + splitValue[0], logfile);
                     break;
+
                 case "dilate":
                     try {
                         size = Integer.parseInt(splitValue[1]);
                         filtersOptions.put(new DilateFilter(), size);
-                        logger.log(" you want to apply " + splitValue[0] + ". value: " + splitValue[1]);
+                        logger.log(" you want to apply " + splitValue[0] + ". value: " + splitValue[1], logfile);
                     }catch (Exception e){
-                        throw new FilterException("you don't give valid value for filters: " + splitValue[0]);
+                        System.out.println("you don't give valid value for filters: " + splitValue[0]);
+                    }
+                    break;
+
+                case "zeteam":
+                    try {
+                        size = Integer.parseInt(splitValue[1]);
+                        filtersOptions.put(new FilterZeTeam(), size);
+                        logger.log(" you want to apply " + splitValue[0] + ". value: " + splitValue[1], logfile);
+                    }catch (Exception e){
+                        System.out.println("you don't give valid value for filters: " + splitValue[0]);
                     }
                     break;
             }
-
         }
 
 
@@ -187,8 +220,8 @@ public abstract class AppFilter {
 
 
     /**
-     * this method apply the filters containing in the Map in parameters to all Files from a specified directory and save them in an other.
-     * directories are in the listCommandArgs (0 for in directory, 1 for out directory)
+     * this method apply filters - containing in the Map in parameters - to all Files from a specified directory and save them in an other.
+     * directories are in the listCommandArgs (0 for input directory, 1 for output directory)
      * @param filtersOptions    Map : containing an IFilter as key, and Integer as value for each filters selected from the CLI
      * @param listCommandArgs   List : a String list used here to have the in directory and the out directory
      */
@@ -218,7 +251,8 @@ public abstract class AppFilter {
                     for (Map.Entry<IFilter, Integer> entry : filtersOptions.entrySet()) {
                         img = entry.getKey().filter(img, entry.getValue());
                         String beginMessage = " => " + entry.getKey().logDescription(entry.getValue()) + " on " + liste[i];
-                        logger.log(beginMessage + " from Directory " + dirInRac + " \t(" + dirIn + "). \t\t\tsave in directory " + dirOutRac + " \t(" +  dirOut + ").");
+                        String endMessage = " from Directory " + dirInRac + " \t(" + dirIn + "). \t\t\tsave in directory " + dirOutRac + " \t(" +  dirOut + ").";
+                        logger.log(beginMessage + endMessage , listCommandArgs.get(4));
                     }
                     imwrite(pathOut, img);
 
@@ -231,8 +265,8 @@ public abstract class AppFilter {
 
 
     /**
-     * this method print the contents from AppFilter.log
-     * @param printLogger   String : used to know if the user want to print the content or not
+     * this method print the contents from a file with .log extension
+     * @param printLogger   String : used to know if the user want to print the content or not (yes , as a boolean)
      */
     private static void dumpLog(String printLogger, String pathName) {
         File f = new File(pathName);

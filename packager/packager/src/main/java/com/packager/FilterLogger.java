@@ -1,5 +1,6 @@
 package com.packager;
 
 public interface FilterLogger {
-    void log(String message);
+
+    void log(String message, String filePath);
 }

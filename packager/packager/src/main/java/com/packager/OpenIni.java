@@ -1,15 +1,21 @@
 package com.packager;
-import org.ini4j.Ini;
 import org.ini4j.Wini;
 
 import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * this class is used to open an ini file
+ */
 public class OpenIni {
 
+    /**
+     * this method is used to open an ini file given in parameter, and read all information in there. we save them in a List
+     * @param filePath              String : filepath of the chosen ini file
+     * @return                      List : containing the information collected from the ini file
+     * @throws FilterException      FilterException : throws when the file couldn't be open
+     */
     public List<String> openIni(String filePath) throws FilterException {
 
         File file2 = new File(filePath);

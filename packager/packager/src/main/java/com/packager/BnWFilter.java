@@ -7,14 +7,14 @@ import org.opencv.imgproc.Imgproc;
 import static org.bytedeco.opencv.global.opencv_imgproc.*;
 
 /**
- * this class could be used to apply a grayscale (black n'white) filter on an image opened as a matrix
+ * this class could be used to apply a grayscale (black n'white) filter on an image opened as a matrix, using opencv's methods
  */
 public class BnWFilter implements IFilter {
 
     /**
      * this method apply a black and white filter on a selected Matrix
      * @param img       Mat :  matrix from an image
-     * @param size      int : not used for now.
+     * @param size      int : not used for now
      * @return          Mat : matrix after modification
      */
     @Override

@@ -5,14 +5,14 @@ import org.opencv.imgproc.Imgproc;
 import static org.bytedeco.opencv.global.opencv_imgproc.*;
 
 /**
- * this class could be used to apply a Dilatation on an image opened as a matrix
+ * this class could be used to apply a Dilatation on an image opened as a matrix, using opencv's methods
  */
 public class DilateFilter implements IFilter {
 
     /**
-     * this method apply a dilating filter on a selected Matrix
+     * this method apply a dilating filter on a selected Matrix , and the effect's power given in parameters
      * @param img       Mat :  matrix from an image
-     * @param size      int : it represent the effect's power: higher it is, more the effect will be important
+     * @param size      int : it represent the effect's power: higher it is, more the dilatation will be important
      * @return          Mat : matrix after modification
      */
     @Override

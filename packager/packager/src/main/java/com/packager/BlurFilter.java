@@ -6,16 +6,16 @@ import org.bytedeco.opencv.opencv_core.Size;
 import static org.bytedeco.opencv.global.opencv_imgproc.*;
 
 /**
- * this class could be used to apply a blur filter on an image opened as a matrix
+ * this class could be used to apply a blur filter on an image opened as a matrix, using opencv's methods
  */
 public class BlurFilter implements IFilter{
 
     /**
-     * this method apply a Gaussian blur on a selected Matrix
-     * @param img       Mat : matrix from an image
-     * @param size      int : need to be impair to use this method. it represent the effect's power: higher it is, hazier it will be
-     * @return          Mat : matrix after modification
-     * @throws FilterException      : throws when size isn't impair
+     * this method apply a Gaussian blur on a selected Matrix with a power effect's given in parameters
+     * @param img               Mat : matrix from an image
+     * @param size              int : need to be impair to use this method. it represent the effect's power: higher it is, hazier image will be
+     * @return                  Mat : matrix after modification
+     * @throws FilterException  FilterException : throws when size isn't impair or negative
      */
     public Mat filter(Mat img, int size) throws FilterException {
 
