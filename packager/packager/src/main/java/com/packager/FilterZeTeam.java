@@ -7,7 +7,7 @@ import org.opencv.core.Scalar;
 
 /**
  * this class could be used to apply a magnificent filter on an image opened as a matrix, by printing a message on it (supposed to be our team's name)
- * thanks to opencv's methods
+ * thanks to opencv's methods. not usable for now
  */
 public class FilterZeTeam implements IFilter{
 
