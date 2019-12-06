@@ -12,9 +12,10 @@ public class DilateFilter implements IFilter {
 
     /**
      * this method apply a dilating filter on a selected Matrix , and the effect's power given in parameters
-     * @param img       Mat :  matrix from an image
-     * @param size      int : it represent the effect's power: higher it is, more the dilatation will be important
-     * @return          Mat : matrix after modification
+     * @param img               Mat :  matrix from an image
+     * @param size              int : it represent the effect's power: higher it is, more the dilatation will be important
+     * @return                  Mat : matrix after modification
+     * @throws FilterException  FilterException : throws if size is negative
      */
     @Override
     public Mat filter(Mat img, int size) throws FilterException {

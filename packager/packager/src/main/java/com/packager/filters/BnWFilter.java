@@ -14,10 +14,10 @@ public class BnWFilter implements IFilter {
 
     /**
      * this method apply a black and white filter on a selected Matrix
-     * @param img       Mat :  matrix from an image
-     * @param size      int : not used for now
-     * @return          Mat : matrix after modification
-     * @throws FilterException
+     * @param img                   Mat :  matrix from an image
+     * @param size                  int : not used for now
+     * @return                      Mat : matrix after modification
+     * @throws FilterException      FilterException : throws if img is null
      */
     @Override
     public Mat filter(Mat img, int size) throws FilterException{

@@ -261,7 +261,7 @@ public abstract class AppFilter {
                     imwrite(pathOut, img);
 
                 } catch (Exception e) {
-                    System.out.println(e);
+                    System.out.println("can't open the file: " + pathIn + "  => " + e);
                 }
             }
         }
