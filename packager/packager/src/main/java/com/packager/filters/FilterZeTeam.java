@@ -1,15 +1,13 @@
-package com.packager;
+package com.packager.filters;
 
-import org.bytedeco.opencv.global.opencv_imgproc;
-import org.opencv.core.Point;
+import com.packager.exception.FilterException;
 import org.bytedeco.opencv.opencv_core.Mat;
-import org.opencv.core.Scalar;
 
 /**
  * this class could be used to apply a magnificent filter on an image opened as a matrix, by printing a message on it (supposed to be our team's name)
  * thanks to opencv's methods. not usable for now
  */
-public class FilterZeTeam implements IFilter{
+public class FilterZeTeam implements IFilter {
 
     /**
      * this method print a message on a selected Matrix with a font size given in parameters

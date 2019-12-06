@@ -1,4 +1,5 @@
 package com.packager;
+import com.packager.exception.FilterException;
 import org.ini4j.Wini;
 
 import java.io.File;

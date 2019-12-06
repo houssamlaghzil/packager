@@ -1,5 +1,6 @@
-package com.packager;
+package com.packager.filters;
 
+import com.packager.exception.FilterException;
 import org.bytedeco.opencv.opencv_core.Mat;
 
 /**

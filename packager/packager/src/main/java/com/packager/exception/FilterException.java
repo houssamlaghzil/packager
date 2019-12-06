@@ -1,4 +1,4 @@
-package com.packager;
+package com.packager.exception;
 
 /**
  * this class is used to centralise Exception we could encounter

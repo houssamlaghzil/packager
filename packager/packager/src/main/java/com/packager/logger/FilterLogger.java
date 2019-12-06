@@ -1,4 +1,4 @@
-package com.packager;
+package com.packager.logger;
 
 public interface FilterLogger {
 

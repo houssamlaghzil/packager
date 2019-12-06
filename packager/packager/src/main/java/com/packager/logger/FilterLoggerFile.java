@@ -1,10 +1,9 @@
-package com.packager;
+package com.packager.logger;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.List;
 
 /**
  * this class is used to write message in a log file, to register all operation we had made, with the date and time

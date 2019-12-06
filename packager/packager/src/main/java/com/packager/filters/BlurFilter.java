@@ -1,5 +1,6 @@
-package com.packager;
+package com.packager.filters;
 
+import com.packager.exception.FilterException;
 import org.bytedeco.opencv.opencv_core.Mat;
 import org.bytedeco.opencv.opencv_core.Size;
 
@@ -8,7 +9,7 @@ import static org.bytedeco.opencv.global.opencv_imgproc.*;
 /**
  * this class could be used to apply a blur filter on an image opened as a matrix, using opencv's methods
  */
-public class BlurFilter implements IFilter{
+public class BlurFilter implements IFilter {
 
     /**
      * this method apply a Gaussian blur on a selected Matrix with a power effect's given in parameters
